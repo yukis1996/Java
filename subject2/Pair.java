@@ -1,25 +1,24 @@
 public class Pair {
-
-	private  int first;
-	private  int second;
-	
+	private int key;
+	private int value;
 	public static void main(String[] args) {
 		Pair p = new Pair(1,2);
-		System.out.println(p.getFirst());
-		System.out.println(p.getSecond());
+		int first = p.first();
+		int second = p.second();
+		System.out.println(first);
+		System.out.println(second);
 	}
 
-	private Pair(int first, int second) {
-		
-		this.first = first;
-		this.second = second;
-	}
-	public int getFirst() {
-		return this.first;
-	}
-	public int getSecond() {
-		return this.second;
+	public Pair(int key, int value) {
+		this.key = key;
+		this.value = value;
 	}
 
+	public int first() {
+		return this.key;
+	}
 
+	public int second() {
+		return this.value;
+	}
 }
