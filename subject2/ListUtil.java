@@ -32,6 +32,9 @@ public class ListUtil {
 
 		var pos = ListUtil.positions(10, List.of(10,15,20,10,10,33));
 		System.out.println(pos);
+
+		var scalar = ListUtil.scalarProduct(List.of(1,2,3), List.of(4,5,6));
+		System.out.println(scalar);
 	}
 
 		// ②evensofの処理
@@ -91,7 +94,7 @@ public class ListUtil {
 		return pfList;
 	}
 
-	
+
 	// public static List<Pair<Integer,Integer>> pairs(List<Integer> a) {
 	// 	List<Pair<Integer,Integer>> pList = new ArrayList<>();
 	// 	for (int d = 0; d < a.size() -1; d++) {
@@ -113,6 +116,16 @@ public class ListUtil {
 		// 	ii = uu.get(p);
 		// }
 		return uu;
+	}
+
+	public static int scalarProduct(List<Integer> key, List<Integer> value) {
+		int product = 0;
+		int total = 0;
+		for (int c = 0; c < key.size(); c++) {
+			product = key.get(c) * value.get(c);
+			total += product;
+		}
+		return total;
 	}
 }
 
