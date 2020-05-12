@@ -1,24 +1,28 @@
-public class Pair {
-	private int key;
-	private int value;
+public class Pair<T,S> {
+	private T key;
+	private S value;
 	public static void main(String[] args) {
-		Pair p = new Pair(1,2);
+		Pair<Integer,Integer> p = new Pair<>(1,2);
 		int first = p.first();
 		int second = p.second();
 		System.out.println(first);
 		System.out.println(second);
 	}
 
-	public Pair(int key, int value) {
+	public Pair(T key, S value) {
 		this.key = key;
 		this.value = value;
 	}
 
-	public int first() {
+	public T first() {
 		return this.key;
 	}
 
-	public int second() {
+	public S second() {
 		return this.value;
+	}
+	@Override
+	public String toString() {
+		return "(" + this.key + "," + this.value + ")";
 	}
 }
