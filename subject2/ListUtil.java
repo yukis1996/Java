@@ -27,8 +27,9 @@ public class ListUtil {
 		var perfect = ListUtil.perfects(500);
 		System.out.println(perfect);
 
-		// var pa = ListUtil.pairs(List.of(1,2,3,4));
-		// System.out.println(pa);
+		var pa = ListUtil.pairs(List.of(1,2,3,4));
+		// var st = ListUtil.pairs(List.of("a", "b", "c"));
+		System.out.println(pa);
 
 		var pos = ListUtil.positions(10, List.of(10,15,20,10,10,33));
 		System.out.println(pos);
@@ -68,6 +69,8 @@ public class ListUtil {
 		return zipsList;
 	}
 
+	
+
 		// ⑤factorsの処理
 	public static List<Integer> factors(int number) {
 		List<Integer> fcList = new ArrayList<>();
@@ -95,14 +98,14 @@ public class ListUtil {
 	}
 
 
-	// public static List<Pair<Integer,Integer>> pairs(List<Integer> a) {
-	// 	List<Pair<Integer,Integer>> pList = new ArrayList<>();
-	// 	for (int d = 0; d < a.size() -1; d++) {
-	// 		Pair<Integer,Integer> tt = new Pair<>(a.get(d),a.get(d+1));
-	// 		pList.add(tt);
-	// 	}
-	// 	return tt;
-	// }
+	public static List<Pair<Integer,Integer>> pairs(List<Integer> a) {
+		List<Pair<Integer,Integer>> pList = new ArrayList<>();
+		for (int d = 0; d < a.size() -1; d++) {
+			Pair<Integer,Integer> tt = new Pair<>(a.get(d),a.get(d+1));
+			pList.add(tt);
+		}
+		return pList;
+	}
 
 	public static List<Pair<Integer,Integer>> positions(int eee, List<Integer> yyy) {
 		// List<Integer> posList = new ArrayList<>();
