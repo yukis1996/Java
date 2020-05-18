@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: aivick.ListUtilTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.109 s <<< FAILURE! - in aivick.ListUtilTest
+引数1と引数2をPairとして繰り返して返す  Time elapsed: 0.015 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: java.util.ArrayList@3d3fcdb0<[(33,2), (56,6), (11,8)]> but was: java.util.ArrayList@641147d0<[(33,2), (56,6), (11,8)]>
+	at aivick.ListUtilTest.引数1と引数2をPairとして繰り返して返す(ListUtilTest.java:78)
+

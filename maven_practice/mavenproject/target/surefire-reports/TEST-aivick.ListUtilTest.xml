@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="aivick.ListUtilTest" time="0.109" tests="8" errors="0" skipped="0" failures="1">
+  <properties>
+    <property name="java.specification.version" value="13"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="/local/app/mavenproject/target/test-classes:/local/app/mavenproject/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="os.name" value="Linux"/>
+    <property name="java.vm.specification.version" value="13"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="/usr/java/openjdk-13/lib"/>
+    <property name="sun.java.command" value="/local/app/mavenproject/target/surefire/surefirebooter13193167056270644568.jar /local/app/mavenproject/target/surefire 2020-05-18T00-42-14_244-jvmRun1 surefire12075478584095772577tmp surefire_013766447401447138329tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="/local/app/mavenproject/target/test-classes:/local/app/mavenproject/target/classes:/root/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.6.2/junit-jupiter-engine-5.6.2.jar:/root/.m2/repository/org/apiguardian/apiguardian-api/1.1.0/apiguardian-api-1.1.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-engine/1.6.2/junit-platform-engine-1.6.2.jar:/root/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/root/.m2/repository/org/junit/platform/junit-platform-commons/1.6.2/junit-platform-commons-1.6.2.jar:/root/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.6.2/junit-jupiter-api-5.6.2.jar:"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="/root"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2020-01-14"/>
+    <property name="java.home" value="/usr/java/openjdk-13"/>
+    <property name="file.separator" value="/"/>
+    <property name="basedir" value="/local/app/mavenproject"/>
+    <property name="java.vm.compressedOopsMode" value="32-bit"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="/local/app/mavenproject/target/surefire/surefirebooter13193167056270644568.jar"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="13.0.2+8"/>
+    <property name="user.name" value="root"/>
+    <property name="path.separator" value=":"/>
+    <property name="os.version" value="4.19.76-linuxkit"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="/root/.m2/repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="java.version" value="13.0.2"/>
+    <property name="user.dir" value="/local/app/mavenproject"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="13.0.2+8"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="57.0"/>
+  </properties>
+  <testcase name="偶数がない場合空のListを返すこと" classname="aivick.ListUtilTest" time="0.045"/>
+  <testcase name="引数が空のリスト場合" classname="aivick.ListUtilTest" time="0"/>
+  <testcase name="引数1の値に0を指定した場合空のリストを返す" classname="aivick.ListUtilTest" time="0.002"/>
+  <testcase name="引数1と引数2をPairとして繰り返して返す" classname="aivick.ListUtilTest" time="0.015">
+    <failure message="expected: java.util.ArrayList@3d3fcdb0&lt;[(33,2), (56,6), (11,8)]&gt; but was: java.util.ArrayList@641147d0&lt;[(33,2), (56,6), (11,8)]&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: java.util.ArrayList@3d3fcdb0<[(33,2), (56,6), (11,8)]> but was: java.util.ArrayList@641147d0<[(33,2), (56,6), (11,8)]>
+	at aivick.ListUtilTest.引数1と引数2をPairとして繰り返して返す(ListUtilTest.java:78)
+]]></failure>
+  </testcase>
+  <testcase name="引数1と引数2のサイズが違う場合でも小さいサイズに合わせて返すこと1" classname="aivick.ListUtilTest" time="0"/>
+  <testcase name="引数2が空の場合" classname="aivick.ListUtilTest" time="0"/>
+  <testcase name="引数1の数だけ引数2が抽出できること" classname="aivick.ListUtilTest" time="0.002"/>
+  <testcase name="偶数のみが抽出できること" classname="aivick.ListUtilTest" time="0.002"/>
+</testsuite>

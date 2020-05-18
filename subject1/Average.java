@@ -1,5 +1,5 @@
 public class Average {
-	public static void main (String[] args) {
+	public static void main(String[] args) {
 		double total = 0;
 		double average = 0;
 		for (String arg : args) {
@@ -7,7 +7,7 @@ public class Average {
 		}
 		average = total / args.length;
 		if (total % args.length == 0) {
-			System.out.println((int)average);
+			System.out.println((int) average);
 		} else {
 			System.out.println(average);
 		}
