@@ -6,7 +6,7 @@ import org.seasar.doma.Table;
 
 @Entity
 @Table(name = "menu_recipe")
-public class Menu_Recipe {
+public class MenuRecipe {
 	
 	@Column(name = "menu_id")
 	private Integer menu_id;

@@ -20,9 +20,6 @@ public interface RecipeDao {
 	@Select
 	List<Recipe> findALl();
 	
-//	@Select
-//	List<Recipe> findName(String name);
-	
 	@Insert
 	int insert(Recipe recipe);
 	

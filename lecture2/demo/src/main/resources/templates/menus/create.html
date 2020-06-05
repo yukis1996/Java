@@ -22,16 +22,14 @@
 
     <span th:text="#{name}">名前</span>:<input type="text" name="name" th:value="*{name}"><br/>
     <span th:text="#{category}">カテゴリー</span>:
-    <select name="category">
-    	<option th:value="*{category}">和食</option>
-    	<option th:value="*{category}">洋食</option>
-    	<option th:value="*{category}">中華</option>
-    </select>
+    <input type="text" name="category" th:value="*{category}"><br/>
     <span th:text="#{price}">金額</span>: <input type="text" name="price" th:value="*{price}">
 
-	<!--input type="checkbox" name="menu_id" value=1>レシピ１
-	<input type="checkbox" name="menu_id" value=2>レシピ2
-	<input type="checkbox" name="menu_id" value=3>レシピ3-->
+	<p>レシピ選択</p>
+	<p th:each="recipe : ${recipeList}" th:object="${recipe}">
+			<input type="checkbox" name="recipe" th:value="*{id}">  
+      <a th:text="*{name}"></a></p>
+
     <button type="submit" th:text="#{register}">登録</button>
   </form>
 </div>

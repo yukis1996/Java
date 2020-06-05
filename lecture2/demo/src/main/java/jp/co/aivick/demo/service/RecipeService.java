@@ -23,9 +23,6 @@ public class RecipeService {
 		return this.recipeDao.findALl();
 	}
 	
-//	public List<Recipe> findname(String name) {
-//		return recipeDao.findName(name);
-//	}
 	
 	@Transactional
 	public Recipe create(Recipe recipe) {

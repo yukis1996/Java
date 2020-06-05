@@ -6,6 +6,7 @@ import org.seasar.doma.Dao;
 import org.seasar.doma.Insert;
 import org.seasar.doma.Select;
 import org.seasar.doma.boot.ConfigAutowireable;
+import org.seasar.doma.jdbc.Result;
 
 import jp.co.aivick.demo.entity.Menu;
 
@@ -21,6 +22,6 @@ public interface MenuDao {
 	List<Menu> findALl();
 	
 	@Insert
-	int insert(Menu menu);
+	Result<Menu> insert(Menu menu);
 
 }

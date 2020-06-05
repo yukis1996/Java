@@ -13,6 +13,16 @@ public class MenuForm {
 	
 	private Integer price;
 	
+	private String[] recipe;
+	
+	public String[] getRecipe() {
+		return recipe;
+	}
+
+	public void setRecipe(String[] recipe) {
+		this.recipe = recipe;
+	}
+
 	public Integer getId() {
 		return id;
 	}
