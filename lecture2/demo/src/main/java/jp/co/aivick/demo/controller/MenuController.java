@@ -45,10 +45,15 @@ public class MenuController {
 		
 		Menu menu = new Menu(null, menuForm.getName(), menuForm.getCategory(),menuForm.getPrice());
 		
-		menuService.create(menu, menuForm.getRecipe());
-		
-		
+		menuService.create(menu, menuForm.getRecipe());	
 		
 		return "redirect:/";
+	}
+	
+	@GetMapping("/list")
+	public String list(Model model) {
+		List<Menu> menu = menuService.findAll();
+		model.addAttribute("menus", menu);
+		return "menus/list.html";
 	}
 }

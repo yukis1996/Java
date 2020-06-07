@@ -28,17 +28,18 @@
     <tr>
       <th th:text="#{id}"></th>
       <th th:text="#{name}">名前</th>
-      <th th:text="#{cal}">カロリー</th>
-      <th></th>
+      <th th:text="#{category}">種類</th>
+      <th th:text="#{price}">価格</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="recipe : ${recipes}" th:object="${recipe}">
+    <tr th:each="menu : ${menus}" th:object="${menu}">
       <td th:text="*{id}"></td>
       <td th:text="*{name}"></td>
-      <td th:text="*{cal}"></td>
+      <td th:text="*{category}"></td>
+      <td th:text="*{price}"></td>
       <td>
-       <a th:href="@{'/recipes/update/' + *{id}}" th:text="#{update}">更新</a>
+       <a th:href="@{'/menus/update/' + *{id}}" th:text="#{update}">更新</a>
       </td>
     </tr>
     </tbody>
