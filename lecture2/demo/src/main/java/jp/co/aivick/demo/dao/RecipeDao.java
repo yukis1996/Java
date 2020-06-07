@@ -20,6 +20,12 @@ public interface RecipeDao {
 	@Select
 	List<Recipe> findALl();
 	
+	@Select
+	List<Recipe> search(String search);
+	
+	@Select
+	List<Recipe> cal(Integer beforeCal, Integer afterCal);
+	
 	@Insert
 	int insert(Recipe recipe);
 	

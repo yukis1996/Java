@@ -23,6 +23,13 @@ public class RecipeService {
 		return this.recipeDao.findALl();
 	}
 	
+	public List<Recipe> findSearch(String search) {
+		return this.recipeDao.search(search);
+	}
+	
+	public List<Recipe> findCal(Integer beforeCal, Integer afterCal) {
+		return this.recipeDao.cal(beforeCal, afterCal);
+	}
 	
 	@Transactional
 	public Recipe create(Recipe recipe) {

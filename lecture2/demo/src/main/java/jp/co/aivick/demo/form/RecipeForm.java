@@ -15,7 +15,12 @@ public class RecipeForm {
 	@NotNull
 	private Integer cal;
 	
-	 public String getName() {
+	private String search;
+	private Integer beforeCal;
+	private Integer afterCal;
+	
+	
+	public String getName() {
 	        return name;
 	    }
 
@@ -38,5 +43,29 @@ public class RecipeForm {
 	    public void setCal(Integer cal) {
 	        this.cal = cal;
 	    }
+	    
+		public String getSearch() {
+			return search;
+		}
+
+		public void setSearch(String search) {
+			this.search = search;
+		}
+		
+		public Integer getBeforeCal() {
+			return beforeCal;
+		}
+
+		public void setBeforeCal(Integer beforeCal) {
+			this.beforeCal = beforeCal;
+		}
+
+		public Integer getAfterCal() {
+			return afterCal;
+		}
+
+		public void setAfterCal(Integer afterCal) {
+			this.afterCal = afterCal;
+		}
 
 }

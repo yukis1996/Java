@@ -2,4 +2,4 @@ select
     /*%expand*/*
 from recipes
 where name
-Like /*%name%*/
+Like /* "%" + search "%" + */'a'
