@@ -31,17 +31,7 @@
     </ul>
 
     <span th:text="#{name}">名前</span>:<input type="search" name="search" th:value="*{search}"><br/>
-
-    <button type="submit" th:text="#{search}">検索</button>
-  </form>
-
-  <form action="/recipes/list" method="get" th:object="${recipeForm}">
-
-    <ul>
-      <li th:each="error: ${#fields.detailedErrors()}" th:text="${error.message}"></li>
-    </ul>
-
-    <span th:text="#{name}">名前</span>:
+    <span th:text="#{cal}">カロリー</span>:
     <input type="number" name="beforeCal" th:value="*{beforeCal}">～
     <input type="number" name="afterCal" th:value="*{afterCal}">
 
