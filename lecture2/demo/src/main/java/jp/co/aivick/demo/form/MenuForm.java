@@ -15,9 +15,22 @@ public class MenuForm {
 	
 	private String[] recipe;
 	
+	private String search;
+	
+	public String getSearch() {
+		return search;
+	}
+
+
+	public void setSearch(String search) {
+		this.search = search;
+	}
+
+
 	public String[] getRecipe() {
 		return recipe;
 	}
+	
 
 	public void setRecipe(String[] recipe) {
 		this.recipe = recipe;

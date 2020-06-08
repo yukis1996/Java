@@ -21,6 +21,9 @@ public interface MenuDao {
 	@Select
 	List<Menu> findALl();
 	
+	@Select
+	List<Menu> name(String name);
+	
 	@Insert
 	Result<Menu> insert(Menu menu);
 

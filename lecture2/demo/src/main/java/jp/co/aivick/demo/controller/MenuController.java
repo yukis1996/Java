@@ -51,9 +51,16 @@ public class MenuController {
 	}
 	
 	@GetMapping("/list")
-	public String list(Model model) {
-		List<Menu> menu = menuService.findAll();
-		model.addAttribute("menus", menu);
+	public String list(MenuForm menuForm, Model model) {
+		if (menuForm.getSearch() == null) {
+			List<Menu> menu = menuService.findAll();
+			model.addAttribute("menus", menu);
+			model.addAttribute("menuForm", new MenuForm());
+			return "menus/list.html";
+		}
+		List<Menu> menuList = menuService.findSearch(menuForm.getSearch());
+		model.addAttribute("menus",menuList);
+		
 		return "menus/list.html";
 	}
 }
