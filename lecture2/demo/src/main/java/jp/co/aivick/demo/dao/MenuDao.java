@@ -22,7 +22,7 @@ public interface MenuDao {
 	List<Menu> findALl();
 	
 	@Select
-	List<Menu> name(String name);
+	List<Menu> name(String name, String category);
 	
 	@Insert
 	Result<Menu> insert(Menu menu);

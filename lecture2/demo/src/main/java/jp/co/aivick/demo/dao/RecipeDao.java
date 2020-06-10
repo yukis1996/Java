@@ -13,6 +13,9 @@ import jp.co.aivick.demo.entity.Recipe;
 @ConfigAutowireable
 @Dao
 public interface RecipeDao {
+	
+	@Select
+	Recipe name(String name);
 
 	@Select
 	Recipe find(String id);
@@ -21,7 +24,7 @@ public interface RecipeDao {
 	List<Recipe> findALl();
 	
 	@Select
-	List<Recipe> search(String search);
+	List<Recipe> search(String search, Integer beforeCal, Integer afterCal);
 	
 	@Select
 	List<Recipe> cal(Integer beforeCal, Integer afterCal);

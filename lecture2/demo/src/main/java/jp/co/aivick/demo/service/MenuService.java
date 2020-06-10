@@ -31,8 +31,8 @@ public class MenuService {
 		return this.menuDao.findALl();
 	}
 	
-	public List<Menu> findSearch(String name) {
-		return this.menuDao.name(name);
+	public List<Menu> findSearch(String name, String category) {
+		return this.menuDao.name(name, category);
 	}
 	
 	@Transactional

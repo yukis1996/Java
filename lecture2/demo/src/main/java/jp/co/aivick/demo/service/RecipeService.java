@@ -15,6 +15,10 @@ public class RecipeService {
 	@Autowired
 	private RecipeDao recipeDao;
 	
+	public Recipe nameValidate(String name) {
+		return recipeDao.name(name);
+	}
+	
 	public Recipe findBy(String id) {
 		return recipeDao.find(id);
 	}
@@ -23,8 +27,8 @@ public class RecipeService {
 		return this.recipeDao.findALl();
 	}
 	
-	public List<Recipe> findSearch(String search) {
-		return this.recipeDao.search(search);
+	public List<Recipe> findSearch(String search, Integer beforeCal, Integer afterCal) {
+		return this.recipeDao.search(search, beforeCal, afterCal);
 	}
 	
 	public List<Recipe> findCal(Integer beforeCal, Integer afterCal) {

@@ -11,6 +11,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import jp.co.aivick.demo.entity.Menu;
 import jp.co.aivick.demo.entity.Recipe;
@@ -51,14 +52,14 @@ public class MenuController {
 	}
 	
 	@GetMapping("/list")
-	public String list(MenuForm menuForm, Model model) {
-		if (menuForm.getSearch() == null) {
+	public String list(@RequestParam String name, @RequestParam String category, Model model) {
+		if (name == null && category == null) {
 			List<Menu> menu = menuService.findAll();
 			model.addAttribute("menus", menu);
 			model.addAttribute("menuForm", new MenuForm());
 			return "menus/list.html";
 		}
-		List<Menu> menuList = menuService.findSearch(menuForm.getSearch());
+		List<Menu> menuList = menuService.findSearch(name, category);
 		model.addAttribute("menus",menuList);
 		
 		return "menus/list.html";

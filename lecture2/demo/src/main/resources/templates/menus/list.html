@@ -30,7 +30,9 @@
     </ul>
 
     <span th:text="#{name}">名前</span>:
-    <input type="search" name="search" th:value="*{search}">
+    <input type="search" name="search" th:value="*{search}"><br>
+    <span th:text="#{category}">種類</span>:
+    <input type="serrch" name="category" th:value="*{category}">
     <button type="submit" th:type="#{search}">検索</button>
   </form>
 

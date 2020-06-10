@@ -37,19 +37,29 @@ public class RecipeController {
 			model.addAttribute("recipes", recipe);
 			model.addAttribute("recipeForm", new RecipeForm());
 			return "recipes/list.html";
-		}
+			//後で消して確認
+			
+		}else {
+				List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch(), recipeForm.getBeforeCal(), recipeForm.getAfterCal());
+				model.addAttribute("recipes", recipeList);
+				return "recipes/list.html";
+			}
 		
-		if (recipeForm.getSearch() != null) {
-			List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch());
-			model.addAttribute("recipes", recipeList);
-
-			return "recipes/list.html";
-		}
+//		
+//		if (recipeForm.getSearch() != null) {
+//			List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch(), recipeForm.getBeforeCal(), recipeForm.getAfterCal());
+//			model.addAttribute("recipes", recipeList);
+//
 		
-		List<Recipe> recipeCalList = recipeService.findCal(recipeForm.getBeforeCal(), recipeForm.getAfterCal());
-		model.addAttribute("recipes", recipeCalList);
+//			return "recipes/list.html";
+//		}
 
-		return "recipes/list.html";
+//		List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch(), recipeForm.getBeforeCal(), recipeForm.getAfterCal());
+//		model.addAttribute("recipes", recipeList);
+//		List<Recipe> recipeCalList = recipeService.findCal(recipeForm.getBeforeCal(), recipeForm.getAfterCal());
+//		model.addAttribute("recipes", recipeCalList);
+
+//		return "recipes/list.html";
 	}
 	
 	
@@ -62,6 +72,10 @@ public class RecipeController {
 	@PostMapping("/create")
 	public String create(@Validated RecipeForm recipeForm, BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) {
+			return "recipes/create.html";
+		}
+		if (recipeForm.getName().equals(recipeService.nameValidate(recipeForm.getName()))) {
+			//ストリーム
 			return "recipes/create.html";
 		}
 		
@@ -98,18 +112,4 @@ public class RecipeController {
 		return "redirect:/recipes/update/" + updateRecipe.getId();
 		
 	}
-	
-//	@GetMapping("/search")
-//	public String searchRecipe(Model model) {
-//		model.addAttribute("recipeForm", new RecipeForm());
-//		return "recipes/search.html";
-//	}
-//	
-//	@PostMapping("/search")
-//	public String search(String name, Model model) {
-//		List<Recipe> recipe = recipeService.findAll();
-//		model.addAttribute("recipes", recipe);
-//		return "recipes/search.html";
-//	}
-	
 }
