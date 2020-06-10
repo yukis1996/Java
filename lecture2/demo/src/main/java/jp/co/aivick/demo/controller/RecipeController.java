@@ -32,34 +32,9 @@ public class RecipeController {
 	
 	@GetMapping("/list")
 	public String list(RecipeForm recipeForm, Model model) { /* StringはView名を返す*/
-		if (recipeForm.getSearch() == null && recipeForm.getBeforeCal() == null && recipeForm.getAfterCal() == null) {
-			List<Recipe> recipe = recipeService.findAll();
-			model.addAttribute("recipes", recipe);
-			model.addAttribute("recipeForm", new RecipeForm());
-			return "recipes/list.html";
-			//後で消して確認
-			
-		}else {
-				List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch(), recipeForm.getBeforeCal(), recipeForm.getAfterCal());
-				model.addAttribute("recipes", recipeList);
-				return "recipes/list.html";
-			}
-		
-//		
-//		if (recipeForm.getSearch() != null) {
-//			List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch(), recipeForm.getBeforeCal(), recipeForm.getAfterCal());
-//			model.addAttribute("recipes", recipeList);
-//
-		
-//			return "recipes/list.html";
-//		}
-
-//		List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch(), recipeForm.getBeforeCal(), recipeForm.getAfterCal());
-//		model.addAttribute("recipes", recipeList);
-//		List<Recipe> recipeCalList = recipeService.findCal(recipeForm.getBeforeCal(), recipeForm.getAfterCal());
-//		model.addAttribute("recipes", recipeCalList);
-
-//		return "recipes/list.html";
+		List<Recipe> recipeList = recipeService.findSearch(recipeForm.getSearch(), recipeForm.getBeforeCal(), recipeForm.getAfterCal());
+		model.addAttribute("recipes", recipeList);
+		return "recipes/list.html";
 	}
 	
 	

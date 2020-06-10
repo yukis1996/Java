@@ -2,23 +2,15 @@ select
     /*%expand*/*
 from recipes
 where
-/*%if beforeCal == null && afterCal == null*/
-AND name
-	Like /* "%" + search "%" + */'a'
-/*%elseif search != null && beforeCal != null && afterCal != null*/	
-	AND name
-	Like /* "%" + search "%" + */'a'
-	AND
-	/*afterCal*/0 >= cal
-	AND 
-	/*beforeCal*/0 <= cal	
-/*%elseif beforeCal == null*/
-	AND
-	/*afterCal*/0 >= cal	
-/*%elseif afterCal == null*/
-	AND 
-	/*beforeCal*/0 <= cal
+/*%if search != null*/
+	name
+    Like /* "%" + search "%" + */'a'
 /*%end*/
-AND name
-Like /* "%" + search "%" + */'a'
-
+/*%if beforeCal != null*/
+	AND
+    /*beforeCal*/200 <= cal
+/*%end*/
+/*%if afterCal != null*/
+	AND
+    /*afterCal*/0 >= cal
+/*%end*/
